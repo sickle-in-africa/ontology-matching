@@ -3,14 +3,14 @@ match data elements from research site codebooks to ontology terms
 
 To run this code you must clone the repo from github to your local computer. This will produce a folder with the following structure:
 
-`./ontology-matching/`
+`./ontology-matching/`:
 * `src/`
 * `main.sh`
 * `LICENSE`
 * `README.md`
 * `.gitignore`
   
- For the code to run successfully, you will need input data. There is a test suite abailable on request, please email jack at jackmo375@gmail.com for access. You will also need:
+ For the code to run successfully, you will need input data. There is a test suite abailable on request; please email jack at jackmo375@gmail.com for access. You will also need:
   * python v3+
   * conda for python 3+
   
@@ -18,14 +18,14 @@ Once python and conde are installed, use the `ontology-conda-enviroment.yml` fil
 
 To create the enviroment, simply type:
 ```
-conda env create -f environment.yml
+conda env create -f ontology-conda-enviroment.yml
 ```
 
-Finally, before running the code you must create som directories inside `ontology-matching`:
+Finally, before running the code you must create some directories inside `ontology-matching`:
 * `input-data/`
 * `output-data/`
  
-input-data must contain the input files from the test suite as specified above. Output data can be empty at this stage. 
+input-data must contain the input files from the test suite as specified above. `output-data` can be empty at this stage. 
 
 Make the main script executable with
 ```
