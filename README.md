@@ -32,7 +32,7 @@ Make the main script executable with
 chmod +x main.sh
 ```
 
-And, finally, run the program!:
+And, finally, run the program:
 ```
 ./main.sh
 ```
