@@ -1,0 +1,48 @@
+name: ontology
+channels:
+  - fastchan
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - ca-certificates=2022.07.19=h06a4308_0
+  - certifi=2022.9.14=py39h06a4308_0
+  - click=8.0.4=py39h06a4308_0
+  - icu=58.2=he6710b0_3
+  - joblib=1.1.0=pyhd3eb1b0_0
+  - ld_impl_linux-64=2.38=h1181459_1
+  - libblas=3.9.0=14_linux64_openblas
+  - libcblas=3.9.0=14_linux64_openblas
+  - libffi=3.3=he6710b0_2
+  - libgcc=7.2.0=h69d50b8_2
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgfortran-ng=12.1.0=h69a702a_16
+  - libgfortran5=12.1.0=hdcd56e2_16
+  - libgomp=11.2.0=h1234567_1
+  - liblapack=3.9.0=14_linux64_openblas
+  - libopenblas=0.3.20=h043d6bf_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - libxml2=2.9.14=h74e7548_0
+  - libxslt=1.1.35=h4e12654_0
+  - lxml=4.9.1=py39h1edc446_0
+  - ncurses=6.3=h5eee18b_3
+  - networkx=2.8.4=py39h06a4308_0
+  - nltk=3.7=pyhd3eb1b0_0
+  - numpy=1.22.3=py39hc58783e_2
+  - openssl=1.1.1q=h7f8727e_0
+  - pip=22.1.2=py39h06a4308_0
+  - python=3.9.7=h12debd9_1
+  - python_abi=3.9=2_cp39
+  - readline=8.1.2=h7f8727e_1
+  - regex=2022.7.9=py39h5eee18b_0
+  - scipy=1.8.1=py39he49c0e8_0
+  - setuptools=63.4.1=py39h06a4308_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.39.2=h5082296_0
+  - tk=8.6.12=h1ccaba5_0
+  - tqdm=4.64.0=py39h06a4308_0
+  - tzdata=2022c=h04d1e81_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.5=h7f8727e_1
+  - zlib=1.2.12=h5eee18b_3
+prefix: /home/jmorrice/.conda/envs/ontology
