@@ -20,6 +20,10 @@ To create the enviroment, simply type:
 ```
 conda env create -f ontology-conda-enviroment.yml
 ```
+Then to activate the enviroment, run:
+```
+conda activate ontology
+```
 
 Finally, before running the code you must create some directories inside `ontology-matching`:
 * `input-data/`
