@@ -278,11 +278,11 @@ def getnumberofdataelementmatches(Mapping):
 
 def printdataelementmatches(Mapping, outputpath):
 	f = open("outputpath", "w")
-	f.write("# first set element, second set element")
+	f.write("# first set element, second set element\n")
 	for a in Mapping:
 		test = reduce(lambda x, y: x*y, map(lambda x: x!= None, a))
 		if test:
-			f.write("{}, {}".format(a[0], a[1][0])
+			f.write("{}, {}\n".format(a[0], a[1][0])
 	f.close()
 
 #
