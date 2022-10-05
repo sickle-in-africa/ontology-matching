@@ -1,9 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 
-"""Important Note:
-"""
-
 from __future__ import print_function, division
 from functools import reduce
 import scipy as sp
@@ -12,15 +9,13 @@ import numpy as np
 from nltk.stem import LancasterStemmer
 from nltk.stem import PorterStemmer
  
+print('test')
+
 import sys, re, codecs, time
 
 from readontology import Ontology, output_str
 
-try:
-	import networkx as nx
-except ImportError:
-	print(InputError('networkx library not installed', 'networkx library ImportError on line 48 in \nconceptsimilarity.py source code\n\nInstall the networkx library and try again ...\n'))
-	sys.exit(0)
+import networkx as nx
 
 Dict = {}
 
@@ -31,7 +26,8 @@ $ python mappingvariable-jack.py \
 	<firstdataelementsetpath> \
 	<seconddataelementsetpath> \
 	<scdoowlpath> \
-	<mondoobopath>
+	<mondoobopath> \
+	<outputcsvpath>
 
 for example
 
@@ -39,16 +35,20 @@ $ python mappingvariable-jack.py \
 	./input-data/TanzaniaElements.txt \
 	./input-data/NigeriaElements.txt \
 	./input-data/scdo.owl \
-	./input-data/mondo.obo
+	./input-data/mondo.obo \
+	./output-data/matched-data-elements.csv
 
 '''
 
 def main():
 
+	print('test')
+
 	firstdataelementsetpath = sys.argv[1]
 	seconddataelementsetpath = sys.argv[2]
 	scdoowlpath = sys.argv[3]
 	mondoobopath = sys.argv[4]
+	outputcsvpath = sys.argv[5]
 
 	firstdataelementset = getsitevariables(firstdataelementsetpath, 0)
 	seconddataelementset = getsitevariables(seconddataelementsetpath, 0)
@@ -72,6 +72,7 @@ def main():
 	numberofmatches = getnumberofdataelementmatches(Mapping)
 	print("\nThe number of match is:", numberofmatches)
 
+	printdataelementmatches(Mapping, outputcsvpath)
 
 #
 #	methods
@@ -273,9 +274,16 @@ def getnumberofdataelementmatches(Mapping):
 	for a in Mapping:
 		test = reduce(lambda x, y: x*y, map(lambda x: x!= None, a))
 		n += test
-		if test: print(a)
-	return numberofmatches
+	return n
 
+def printdataelementmatches(Mapping, outputpath):
+	f = open("outputpath", "w")
+	f.write("# first set element, second set element")
+	for a in Mapping:
+		test = reduce(lambda x, y: x*y, map(lambda x: x!= None, a))
+		if test:
+			f.write("{}, {}".format(a[0], a[1][0])
+	f.close()
 
 #
 #	run main
