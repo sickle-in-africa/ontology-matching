@@ -24,18 +24,22 @@ except ImportError:
 
 Dict = {}
 
-#
-#	main
-#
-
 '''
 General call:
 
-$ python mappingvariable-jack.py <firstdataelementsetpath> <seconddataelementsetpath>
+$ python mappingvariable-jack.py \
+	<firstdataelementsetpath> \
+	<seconddataelementsetpath> \
+	<scdoowlpath> \
+	<mondoobopath>
 
 for example
 
-$ python mappingvariable-jack.py ./input-data/TanzaniaElements.txt ./input-data/NigeriaElements.txt
+$ python mappingvariable-jack.py \
+	./input-data/TanzaniaElements.txt \
+	./input-data/NigeriaElements.txt \
+	./input-data/scdo.owl \
+	./input-data/mondo.obo
 
 '''
 
@@ -43,9 +47,8 @@ def main():
 
 	firstdataelementsetpath = sys.argv[1]
 	seconddataelementsetpath = sys.argv[2]
-
-	scdoowlpath = './input-data/scdo.owl'
-	mondoobopath = './input-data/mondo.obo'
+	scdoowlpath = sys.argv[3]
+	mondoobopath = sys.argv[4]
 
 	firstdataelementset = getsitevariables(firstdataelementsetpath, 0)
 	seconddataelementset = getsitevariables(seconddataelementsetpath, 0)
